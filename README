@@ -1,0 +1,90 @@
+//alizalazar9@gmail.com
+
+# EX4 - Containers Project
+
+### Name: Aliza Lazar | ID: 336392899  
+Email: alizalazar9@gmail.com
+
+---
+
+## Overview
+This project implements a generic C++ container called `MyContainer<T>` with support for:
+- Adding and removing elements
+- Printing contents using `<<`
+- Custom iterators to traverse elements in different logical orders
+
+---
+
+##  Supported Iterator Orders
+- `AscendingOrderIterator` – elements sorted from smallest to largest
+- `DescendingOrderIterator` – largest to smallest
+- `SideCrossOrderIterator` – alternates smallest, largest, 2nd smallest, 2nd largest, etc.
+- `ReverseOrderIterator` – in reverse order of insertion
+- `OrderIterator` – in the original insertion order
+- `MiddleOutOrderIterator` – starts from the middle, then expands outward
+
+---
+
+##  Features
+- Templated generic container
+- Works with any comparable type (`int`, `double`, `std::string`, etc.)
+- Uses `std::vector` internally
+- Proper exception handling (e.g. trying to remove a non-existent element)
+- Clean modular design (headers in `include/`, test/demo separated)
+- Fully tested using `doctest`
+- Memory-safe (checked with `valgrind`)
+- Well-organized Makefile with separate targets
+
+---
+
+##  Directory Structure
+
+
+## Directory structure:
+EX4-Containers/
+├── include/
+│   ├── MyContainer.hpp
+│   ├── AscendingOrderIterator.hpp
+│   ├── DescendingOrderIterator.hpp
+│   ├── SideCrossOrderIterator.hpp
+│   ├── ReverseOrderIterator.hpp
+│   ├── OrderIterator.hpp
+│   └── MiddleOutOrderIterator.hpp
+├── tests/
+│   └── test.cpp
+|   └── doctest.h
+├── main.cpp
+├── Makefile
+├── README.md
+
+
+
+---
+
+##  Build & Run
+- `make` – Compile everything (main, demo, tests)
+- `make run-main` – Run the main demo
+- `make run-demo` – Run the demo file
+- `make test` – Run all unit tests (with doctest)
+- `make valgrind` – Run memory check
+- `make clean` – Delete all binaries
+
+---
+
+##  Tests
+Using `doctest`, the following are tested:
+- Basic operations (add, remove, print)
+- Handling duplicates
+- Exception handling
+- Iterator behavior on empty/single-element containers
+- Correct order of iteration for each custom iterator
+- Edge cases and stress tests (e.g. 1000+ elements)
+
+---
+
+ All tests pass.  
+ Code compiles with no warnings.  
+ Memory clean (checked with valgrind).
+
+---
+
